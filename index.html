@@ -24,16 +24,19 @@
 @keyframes blink {
   50% {
     background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    background-size: 75px 150px;
   }
 }
 @-webkit-keyframes blink {
   50% {
     background: -webkit-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    background-size: 75px 150px;
   }
 }
 @-moz-keyframes blink {
   50% {
     background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
+    background-size: 75px 150px;
   }
 }
 .laser {
@@ -114,9 +117,19 @@
 </div>
 
 <button class="flash"> laser eyes on/off</button>
+<button class="color"> color!</button>
 <script>
+// When Light off turn on and vice versa
 $('.flash').click(function() {
   $('.brain').toggleClass('laser');
+});
+
+$('.color').click(function() {
+  var red = Math.floor(Math.random() * 255);
+  var green = Math.floor(Math.random() * 255);
+  var blue = Math.floor(Math.random() * 255);
+  // show in window the number
+  alert(red + "," + green + "," + blue);
 });
 </script>
 </body>
