@@ -1,25 +1,27 @@
 <!DOCTYPE html>
 
 <head>
-<link href="https://fonts.googleapis.com/css?family=Poller+One" rel="stylesheet">
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Poller+One' rel='stylesheet' type='text/css'>
 
 <style>
-
 
 .robot {
   position: relative;
   left: 200px;
 }
-.beep{
+
+.beep {
   width: 5px;
-  height: 0px;
+  height: 0;
   border: 5px solid transparent;
   border-top: 10px solid #777;
   border-bottom: 80px solid #888;
-  left: 140px;
   position: relative;
+  left: 140px;
 }
-/*@keyframes blink {
+
+@keyframes blink {
   50% {
     background: radial-gradient(circle, red 15%, transparent 40%), #cc5;
   }
@@ -34,11 +36,12 @@
     background: -moz-radial-gradient(circle, red 15%, transparent 40%), #cc5;
   }
 }
-*/
-.brain {
+.laser {
   animation: blink .5s infinite;
   -webkit-animation: blink .5s infinite;
   -moz-animation: blink .5s infinite;
+} 
+.brain {
   background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
   background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5; 
   background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
@@ -48,7 +51,7 @@
   border-radius: 60px 60px 10px 10px;
   border-bottom: 40px solid #666;
   position: relative;
-  left: 70px; 
+  left: 70px;
 }
 .torso {
   height: 0;
@@ -60,30 +63,29 @@
 }
 .left {
   font-family: 'Poller One', verdana, arial, sans-serif;
-  color: #666;
   font-weight: bold;
   font-size: 250px;
+  color: #666;
   transform: rotate(200deg);
   -webkit-transform: rotate(200deg);
-  -moz-transform: rotate(200deg); 
+  -moz-transform: rotate(200deg);
   position: relative;
-  left: -190px;
   top: -320px;
+  left: -190px;
   z-index: -1;
 }
 .right {
   font-family: 'Poller One', verdana, arial, sans-serif;
-  color: #666;
   font-weight: bold;
   font-size: 250px;
+  color: #666;
   transform: scaleY(-1) rotate(20deg);
   -webkit-transform: scaleY(-1) rotate(20deg);
   -moz-transform: scaleY(-1) rotate(20deg);
-  z-index: -1;
   position: relative;
   top: -620px;
   left: 190px;
-  
+  z-index: -1;
 }
 .foot {
   height: 40px;
@@ -100,6 +102,7 @@
 </head>
 
 <body>
+
 <div class="robot">
   <div class="beep"></div>
   <div class="brain"></div>
@@ -109,4 +112,11 @@
   </div>
   <div class="foot"></div>
 </div>
+
+<button class="flash"> laser eyes on/off</button>
+<script>
+$('.flash').click(function() {
+  $('.brain').toggleClass('laser');
+});
+</script>
 </body>
