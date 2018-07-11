@@ -6,7 +6,25 @@
 div {
   height: 150px;
   width: 300px;
+  margin: 0 auto;
+}
+.beep {
+  width: 5px;
+  height: 0;
+  border: 5px solid transparent;
+  border-top: 10px solid #777;
+  border-bottom: 80px solid #888;
+}
+.brain {
   background: #cc5;
+  background: radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -webkit-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background: -moz-radial-gradient(circle, white 15%, transparent 40%), #cc5;
+  background-size: 50px 150px;
+  height: 150px;
+  width: 150px;
+  border-radius: 60px 60px 10px 10px;
+  border-bottom: 40px solid #666;
 }
 .torso {
   height: 0;
@@ -14,6 +32,7 @@ div {
   border-top: 300px solid #bc6;
   border-left: 75px solid transparent;
   border-right: 75px solid transparent;
+  border-radius: 20px 20px 100px 100px;
 }
 
 .foot {
@@ -28,6 +47,7 @@ div {
 </head>
 
 <body>
+  <div class="beep"></div>
   <div class="brain"></div>
   <div class="torso"></div>
   <div class="foot"></div>
