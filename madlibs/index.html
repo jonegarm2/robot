@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+    </style>
 </head>
 <body>
-    
+    <div class="prompt"></div>
+    <script>
+        var prompts = [
+        'Type your name',
+        'Type an adjective',
+        'Type a noun'
+        ];
+        // alert(prompts.length);
+        // alert(prompts[0]);
+        // Jquery function that calls the .prompt class and makes it do something
+        $('.prompt').html(prompts[2]);
+    </script>
 </body>
-</html>
